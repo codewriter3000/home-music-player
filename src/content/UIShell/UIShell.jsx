@@ -30,83 +30,29 @@ class UIShell extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <Theme theme='g90'>
+                <Theme theme='g100'>
                     <HeaderContainer
                         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
                             <div>
-                                <Header aria-label="IBM Platform Name">
+                                <Header aria-label="IBM Music Player">
                                     <SkipToContent />
                                     <HeaderMenuButton
                                         aria-label="Open menu"
                                         onClick={onClickSideNavExpand}
                                         isActive={isSideNavExpanded}
                                     />
-                                    <HeaderName href="#" prefix="Carbon">
-                                        Template
+                                    <HeaderName href="/" prefix="IBM">
+                                        Music Player
                                     </HeaderName>
-                                    <HeaderNavigation aria-label="Carbon React App">
-                                        <HeaderMenuItem href="#">Contributing</HeaderMenuItem>
-                                        <HeaderMenuItem href="#">Contact</HeaderMenuItem>
-                                        <HeaderMenu aria-label="How To" menuLinkName="How To">
-                                            <HeaderMenuItem href="#one">Sub-link 1</HeaderMenuItem>
-                                            <HeaderMenuItem href="#two">Sub-link 2</HeaderMenuItem>
-                                            <HeaderMenuItem href="#three">Sub-link 3</HeaderMenuItem>
-                                        </HeaderMenu>
-                                    </HeaderNavigation>
-                                    <HeaderGlobalBar>
-                                        <HeaderGlobalAction
-                                            aria-label="Search"
-                                            tooltipAlignment="end">
-                                            <Search size={20} />
-                                        </HeaderGlobalAction>
-                                        <HeaderGlobalAction
-                                            aria-label="Notifications"
-                                            tooltipAlignment="end">
-                                            <Notification size={20} />
-                                        </HeaderGlobalAction>
-                                        <HeaderGlobalAction
-                                            aria-label="App Switcher"
-                                            tooltipAlignment="end">
-                                            <Switcher size={20} />
-                                        </HeaderGlobalAction>
-                                    </HeaderGlobalBar>
                                     <ErrorBoundary>
                                         <SideNav aria-label="Side navigation" expanded={isSideNavExpanded}>
                                             <SideNavItems>
-                                                <SideNavMenuItem element={Link} to='/'
-                                                    isActive={this.state.activeItem === '/'}
-                                                    onClick={() => { this.setState({ activeItem: '/' }) }}>
-                                                    Overview
-                                                </SideNavMenuItem>
-                                                <SideNavMenu renderIcon={Fade} title="Inventory" defaultExpanded>
-                                                    <SideNavMenuItem element={Link} to='/inventory/items'
-                                                        isActive={this.state.activeItem === '/inventory/items'}
-                                                        onClick={() => { this.setState({ activeItem: '/inventory/items' }) }}>
-                                                        Items
-                                                    </SideNavMenuItem>
-                                                </SideNavMenu>
-                                                <SideNavMenu renderIcon={Fade} title="Management">
-                                                    <SideNavMenuItem href="#">
-                                                        Link
-                                                    </SideNavMenuItem>
-                                                    <SideNavMenuItem href="#">
-                                                        Link
-                                                    </SideNavMenuItem>
-                                                    <SideNavMenuItem href="#">
-                                                        Link
-                                                    </SideNavMenuItem>
-                                                </SideNavMenu>
-                                                <SideNavMenu
-                                                    renderIcon={Fade}
-                                                    title="Docs">
-                                                    <SideNavMenuItem href="#">
-                                                        Link
-                                                    </SideNavMenuItem>
-                                                    <SideNavMenuItem href="#">
-                                                        Link
-                                                    </SideNavMenuItem>
-                                                </SideNavMenu>
-                                            </SideNavItems>
+																								<SideNavMenuItem element={Link} to='/my-library'
+																									isActive={this.state.activeItem === '/my-library'}
+																									onClick={() => this.setState({ activeItem: '/my-library' })}>
+																										My Library
+																								</SideNavMenuItem>
+                                           </SideNavItems>
                                         </SideNav>
                                     </ErrorBoundary>
                                 </Header>
