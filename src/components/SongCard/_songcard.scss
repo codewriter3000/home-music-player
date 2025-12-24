@@ -1,0 +1,24 @@
+@use '@carbon/react/scss/colors';
+
+.song-card {
+    padding: 1em;
+    display: inline-block;
+    transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.song-card:hover {
+    cursor: pointer;
+    background-color: #232323;
+    padding: 1em;
+}
+
+.song-title {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.song-artist {
+    display: block;
+    color: colors.$gray-40;
+}
